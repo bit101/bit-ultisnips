@@ -60,3 +60,17 @@ snippet ()2
 	${2:// body}
 }
 endsnippet
+
+snippet obj
+var ${1:name} = {
+	create: function(${2:args}) {
+		var obj = Object.create(this);
+		obj.init($2);
+		return obj;
+	},
+
+	init: function($2) {
+		${3:// body}
+	}
+}
+endsnippet
